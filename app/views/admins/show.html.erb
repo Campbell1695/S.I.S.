@@ -1,1 +1,3 @@
-<%= @user.name %>, <%= @user.email %>
+<%= @admin.name %>, <%= @admin.email %>
+
+<%= link_to "Settings", edit_admin_path(current_admin) %>
