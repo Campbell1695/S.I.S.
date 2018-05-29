@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   delete '/login', to: 'sessions#destroy'
 
   resources :admins
+  resources :events
 end
