@@ -1,13 +1,19 @@
 class EventsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
       @event = Event.all
   end
 
+  def new
+  @event = Event.new
+end
+
   def create
       @event = Event.new(event_params)
       if @event.save
-          redirect_to "/socialhub"
-        else redirect_to "socialhub"
+          redirect_to @event
+        else
+          redirect_to 'new'
       end
   end
 
@@ -24,23 +30,23 @@ def update
 @event.update(update_params)
 @event.save
 
-redirect_to "/socialhub"
+redirect_to @event
 end
 
   def destroy
   @event = Event.find(params[:id])
     @event.destroy
 
-      redirect_to "socialhub"
+      redirect_to events_path
   end
 
 private
 def update_params
-params.require(:update).permit(:veh_name, :veh_location, :seats, :avatar)
+params.require(:update).permit(:title, :content, :cost, :description, :host, :misc, :setting, :image)
 end
 
-def ship_params
-params.require(:create).permit(:veh_name, :veh_location, :seats, :avatar)
+def event_params
+params.require(:create).permit(:title, :content, :cost, :description, :host, :misc, :setting, :image)
   end
 
 end

@@ -1,3 +1,29 @@
 <%= @admin.name %>, <%= @admin.email %>
-
+<%= link_to 'New shout', new_event_path %>
 <%= link_to "Settings", edit_admin_path(current_admin) %>
+
+<form class="" action="/events" enctype="multipart/form-data" method="post">
+  <p>Title:</p>
+  <input type="text" name="[create]title">
+  <select id="tripFrom" name="[create]content">
+        <option value="Network">Network</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Motivation">Motivation</option>
+        <option value="Resources">Resources</option>
+        <option value="How Tos">How Tos</option>
+  </select>
+  <p>Cost:</p>
+  <input type="text" name="[create]cost">
+  <p>Description:</p>
+  <input type="text" name="[create]description">
+  <p>Host:</p>
+  <input type="text" name="[create]host">
+  <p>Misc:</p>
+  <input type="text" name="[create]misc">
+  <p>Setting:</p>
+  <input type="text" name="[create]setting">
+  <p>picture:</p>
+  <input type="file" name="[create]image">
+  <input type="submit" name="" value="submit">
+
+</form>

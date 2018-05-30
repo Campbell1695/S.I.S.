@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  title: MyText
   content: MyString
   cost: MyText
   description: MyText
@@ -9,6 +10,7 @@ one:
   setting: MyText
 
 two:
+  title: MyText
   content: MyString
   cost: MyText
   description: MyText

@@ -1,0 +1,16 @@
+<p>
+  <% if @event.image.url == nil%>
+	<%= image_tag "/assets/Mountain.png" %>
+	<% else %>
+	<%= image_tag @event.image.url %>
+<% end %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @event.description %>
+</p>

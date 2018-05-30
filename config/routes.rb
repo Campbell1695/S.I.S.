@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   get 'sessions/new'
   root 'welcome#index'
 
+  get '/socialhub', to: 'admins#index'
   get '/signup', to: 'admins#new'
   post '/signup', to: 'admins#create'
 
@@ -10,5 +12,6 @@ Rails.application.routes.draw do
   delete '/login', to: 'sessions#destroy'
 
   resources :admins
+  
   resources :events
 end
