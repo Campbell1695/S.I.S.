@@ -14,3 +14,9 @@
   <strong>Text:</strong>
   <%= @event.description %>
 </p>
+
+<h2>Comments</h2>
+<%= render @event.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
