@@ -9,7 +9,9 @@
 </p>
 
 <p>
-  <%= link_to 'Destroy Comment', [comment.event, comment],
+  <% if current_admin %>
+    <%= link_to 'Destroy Comment', [comment.event, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </p>
