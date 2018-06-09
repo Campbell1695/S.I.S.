@@ -14,6 +14,8 @@
         <option value="Resources">Resources</option>
         <option value="How Tos">How Tos</option>
   </select>
+
+
   <p>Cost:</p>
   <input type="text" name="[create]cost">
   <p>Description:</p>
@@ -29,3 +31,107 @@
   <input type="submit" name="" value="submit">
 
 </form>
+
+<div id="jobsModal" class="modal">
+
+  <!-- Modal content -->
+    <p>Network</p>
+    <form action="/events" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="[create]content" value="Network">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <p>Description:</p>
+    <input type="text" name="[create]description">
+    <p>Host:</p>
+    <input type="text" name="[create]host">
+    <p>Misc:</p>
+    <input type="text" name="[create]misc">
+    <p>Setting:</p>
+    <input type="text" name="[create]setting">
+    <p>Cost:</p>
+    <input type="text" name="[create]cost">
+    <p>picture:</p>
+    <input type="file" name="[create]image">
+    <input type="submit" name="" value="submit">
+    </form>
+
+</div>
+
+<div id="jobsModal" class="modal">
+
+  <!-- Modal content -->
+    <p>Workshops</p>
+    <form action="/events" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="[create]content" value="Workshops">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <p>Description:</p>
+    <input type="text" name="[create]description">
+    <p>Host:</p>
+    <input type="text" name="[create]host">
+    <p>Misc:</p>
+    <input type="text" name="[create]misc">
+    <p>Setting:</p>
+    <input type="text" name="[create]setting">
+    <p>Cost:</p>
+    <input type="text" name="[create]cost">
+    <p>picture:</p>
+    <input type="file" name="[create]image">
+    <input type="submit" name="" value="submit">
+    </form>
+
+</div>
+
+<div id="jobsModal" class="modal">
+
+  <!-- Modal content -->
+    <p>Motivation</p>
+    <form action="/events" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="[create]content" value="Motivation">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <p>Description:</p>
+    <input type="text" name="[create]description">
+    <p>Misc:</p>
+    <input type="text" name="[create]misc">
+    <p>picture:</p>
+    <input type="file" name="[create]image">
+    <input type="submit" name="" value="submit">
+    </form>
+
+</div>
+
+<div id="jobsModal" class="modal">
+
+  <!-- Modal content -->
+    <p>Resources</p>
+    <form action="/events" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="[create]content" value="Resources">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <p>Description:</p>
+    <input type="text" name="[create]description">
+    <p>Misc:</p>
+    <input type="text" name="[create]misc">
+    <p>picture:</p>
+    <input type="file" name="[create]image">
+    <input type="submit" name="" value="submit">
+    </form>
+
+</div>
+
+<p>How To's</p>
+<form action="/events" enctype="multipart/form-data" method="post">
+<input type="hidden" name="[create]content" value="How Tos">
+<input type="text" name="[create]title" placeholder="Title">
+<br>
+<p>Description:</p>
+<input type="text" name="[create]description">
+<p>Misc:</p>
+<input type="text" name="[create]misc">
+<p>picture:</p>
+<input type="file" name="[create]image">
+<input type="submit" name="" value="submit">
+</form>
+
+</div>
