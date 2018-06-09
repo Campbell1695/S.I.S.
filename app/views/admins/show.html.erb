@@ -2,7 +2,7 @@
 
 <%= link_to "Settings", edit_admin_path(current_admin) %>
 <%= link_to "All events", events_path, class: "btn btn-lg btn-primary" %>
-<h1 id="logout_h1"><%= link_to 'log out', logout_path(session), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
+<h1 id=""><%= link_to 'log out', logout_path(session), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
 
 <button id="" onclick="e.network()" class="button">Network</button>
 <button id="" onclick="e.workshop()" class="button">Workshops</button>
@@ -11,102 +11,114 @@
 <button id="" onclick="e.howTo()" class="button">How To's</button>
 
 <div id="networkModal" class="modal">
-    <p>Network</p>
-    <form action="/events" enctype="multipart/form-data" method="post">
+  <h1>Network</h1>
+  <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Network">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
     <p>Description:</p>
     <input type="text" name="[create]description">
+
     <p>Host:</p>
     <input type="text" name="[create]host">
+
     <p>Misc:</p>
     <input type="text" name="[create]misc">
+
     <p>Setting:</p>
     <input type="text" name="[create]setting">
+
     <p>Cost:</p>
     <input type="text" name="[create]cost">
+
     <p>picture:</p>
     <input type="file" name="[create]image">
-    <input type="submit" name="" value="submit">
-    </form>
 
+    <input type="submit" name="" value="submit">
+  </form>
 </div>
 
 <div id="workshopModal" class="modal">
-    <p>Workshops</p>
-    <form action="/events" enctype="multipart/form-data" method="post">
+  <h1>Workshops</h1>
+  <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Workshops">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
+
     <p>Description:</p>
     <input type="text" name="[create]description">
+
     <p>Host:</p>
     <input type="text" name="[create]host">
+
     <p>Misc:</p>
     <input type="text" name="[create]misc">
+
     <p>Setting:</p>
     <input type="text" name="[create]setting">
+
     <p>Cost:</p>
     <input type="text" name="[create]cost">
+
     <p>picture:</p>
     <input type="file" name="[create]image">
     <input type="submit" name="" value="submit">
-    </form>
-
+  </form>
 </div>
 
 <div id="motivationModal" class="modal">
-
-  <!-- Modal content -->
-    <p>Motivation</p>
-    <form action="/events" enctype="multipart/form-data" method="post">
+  <h1>Motivation</h1>
+  <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Motivation">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
+
     <p>Description:</p>
     <input type="text" name="[create]description">
+
     <p>Misc:</p>
     <input type="text" name="[create]misc">
+
     <p>picture:</p>
     <input type="file" name="[create]image">
     <input type="submit" name="" value="submit">
-    </form>
-
+  </form>
 </div>
 
 <div id="resourceModal" class="modal">
-
-    <p>Resources</p>
-    <form action="/events" enctype="multipart/form-data" method="post">
+  <h1>Resources</h1>
+  <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Resources">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
+
     <p>Description:</p>
     <input type="text" name="[create]description">
+
     <p>Misc:</p>
     <input type="text" name="[create]misc">
+
     <p>picture:</p>
     <input type="file" name="[create]image">
     <input type="submit" name="" value="submit">
-    </form>
-
+  </form>
 </div>
 
-
 <div id="howToModal" class="modal">
-<p>How To's</p>
-<form action="/events" enctype="multipart/form-data" method="post">
-<input type="hidden" name="[create]content" value="How Tos">
-<input type="text" name="[create]title" placeholder="Title">
-<br>
-<p>Description:</p>
-<input type="text" name="[create]description">
-<p>Misc:</p>
-<input type="text" name="[create]misc">
-<p>picture:</p>
-<input type="file" name="[create]image">
-<input type="submit" name="" value="submit">
-</form>
+  <h1>How To's</h1>
+  <form action="/events" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="[create]content" value="How Tos">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
 
+    <p>Description:</p>
+    <input type="text" name="[create]description">
+
+    <p>Misc:</p>
+    <input type="text" name="[create]misc">
+
+    <p>picture:</p>
+    <input type="file" name="[create]image">
+    <input type="submit" name="" value="submit">
+  </form>
 </div>

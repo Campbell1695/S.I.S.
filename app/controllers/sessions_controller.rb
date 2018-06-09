@@ -7,9 +7,7 @@ class SessionsController < ApplicationController
     if admin && admin.authenticate(params[:session][:password])
       log_in admin
       redirect_to admin
-      # Log the user in and redirect to the user's show page.
     else
-      # Create an error message.
       render 'new'
     end
   end

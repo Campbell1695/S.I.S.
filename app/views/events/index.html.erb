@@ -12,19 +12,18 @@
       <td><%= event.title %></td>
       <td><%= event.description %></td>
       <% if current_admin %>
-      <td><%= link_to 'Show', event_path(event) %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %></td>
-      <td><%= link_to 'Destroy', event_path(event),
+        <td><%= link_to 'Show', event_path(event) %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event_path(event),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-              <% end %>
+      <% end %>
     </tr>
   <% end %>
 </table>
 
 <% if current_admin %>
-<%= link_to 'admins back', admin_path(current_admin)%>
-
+  <%= link_to 'admins back', admin_path(current_admin)%>
 <% end %>
 
-<p id="home_p"><a href ="/">HOME</a></p>
+<p id=""><a href ="/">HOME</a></p>

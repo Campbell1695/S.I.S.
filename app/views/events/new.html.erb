@@ -1,50 +1,48 @@
 <% if current_admin %>
-<%= form_with scope: :event, url: events_path, local: true do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+  <%= form_with scope: :event, url: events_path, local: true do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
 
-  <p>
-    <%= form.label :content %><br>
-    <%= form.text_area :content %>
-  </p>
+    <p>
+      <%= form.label :content %><br>
+      <%= form.text_area :content %>
+    </p>
 
-  <p>
-    <%= form.label :cost %><br>
-    <%= form.text_field :cost %>
-  </p>
+    <p>
+      <%= form.label :cost %><br>
+      <%= form.text_field :cost %>
+    </p>
 
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
+    <p>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+    </p>
 
-  <p>
-    <%= form.label :host %><br>
-    <%= form.text_field :host %>
-  </p>
+    <p>
+      <%= form.label :host %><br>
+      <%= form.text_field :host %>
+    </p>
 
-  <p>
-    <%= form.label :misc %><br>
-    <%= form.text_area :misc %>
-  </p>
+    <p>
+      <%= form.label :misc %><br>
+      <%= form.text_area :misc %>
+    </p>
 
-  <p>
-    <%= form.label :setting %><br>
-    <%= form.text_field :setting %>
-  </p>
+    <p>
+      <%= form.label :setting %><br>
+      <%= form.text_field :setting %>
+    </p>
 
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
 <% end %>
 
 <% if current_admin %>
-<%= link_to 'admins back', admin_path(current_admin)%>
-
+  <%= link_to 'admins back', admin_path(current_admin)%>
 <% end %>
 
-<p id="home_p"><a href ="/">HOME</a></p>
+<p id=""><a href ="/">HOME</a></p>

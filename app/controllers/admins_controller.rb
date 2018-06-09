@@ -12,11 +12,10 @@ class AdminsController < ApplicationController
   end
 
   def create
-    @admin = Admin.new(admin_params)    # Not the final implementation!
+    @admin = Admin.new(admin_params)
     if @admin.save
       log_in @admin
       redirect_to @admin
-      # Handle a successful save.
     else
       render 'new'
     end
@@ -47,9 +46,9 @@ class AdminsController < ApplicationController
        flash[:danger] = "Please log in."
        redirect_to login_url
      end
-   end
+    end
 
-   def correct_admin
+    def correct_admin
       @admin = Admin.find(params[:id])
       redirect_to(root_url) unless current_admin?(@admin)
     end
