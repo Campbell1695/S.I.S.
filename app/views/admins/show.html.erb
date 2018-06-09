@@ -4,37 +4,13 @@
 <%= link_to "All events", events_path, class: "btn btn-lg btn-primary" %>
 <h1 id="logout_h1"><%= link_to 'log out', logout_path(session), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
 
-<form class="" action="/events" enctype="multipart/form-data" method="post">
-  <p>Title:</p>
-  <input type="text" name="[create]title">
-  <select id="tripFrom" name="[create]content">
-        <option value="Network">Network</option>
-        <option value="Workshop">Workshop</option>
-        <option value="Motivation">Motivation</option>
-        <option value="Resources">Resources</option>
-        <option value="How Tos">How Tos</option>
-  </select>
+<button id="" onclick="e.network()" class="button">Network</button>
+<button id="" onclick="e.workshop()" class="button">Workshops</button>
+<button id="" onclick="e.motivation()" class="button">Motivation</button>
+<button id="" onclick="e.resource()" class="button">Resources</button>
+<button id="" onclick="e.howTo()" class="button">How To's</button>
 
-
-  <p>Cost:</p>
-  <input type="text" name="[create]cost">
-  <p>Description:</p>
-  <input type="text" name="[create]description">
-  <p>Host:</p>
-  <input type="text" name="[create]host">
-  <p>Misc:</p>
-  <input type="text" name="[create]misc">
-  <p>Setting:</p>
-  <input type="text" name="[create]setting">
-  <p>picture:</p>
-  <input type="file" name="[create]image">
-  <input type="submit" name="" value="submit">
-
-</form>
-
-<div id="jobsModal" class="modal">
-
-  <!-- Modal content -->
+<div id="networkModal" class="modal">
     <p>Network</p>
     <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Network">
@@ -57,9 +33,7 @@
 
 </div>
 
-<div id="jobsModal" class="modal">
-
-  <!-- Modal content -->
+<div id="workshopModal" class="modal">
     <p>Workshops</p>
     <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Workshops">
@@ -82,7 +56,7 @@
 
 </div>
 
-<div id="jobsModal" class="modal">
+<div id="motivationModal" class="modal">
 
   <!-- Modal content -->
     <p>Motivation</p>
@@ -101,9 +75,8 @@
 
 </div>
 
-<div id="jobsModal" class="modal">
+<div id="resourceModal" class="modal">
 
-  <!-- Modal content -->
     <p>Resources</p>
     <form action="/events" enctype="multipart/form-data" method="post">
     <input type="hidden" name="[create]content" value="Resources">
@@ -120,6 +93,8 @@
 
 </div>
 
+
+<div id="howToModal" class="modal">
 <p>How To's</p>
 <form action="/events" enctype="multipart/form-data" method="post">
 <input type="hidden" name="[create]content" value="How Tos">

@@ -14,3 +14,50 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// JavaScript for pop up modals. Used for creating select eventsS
+var e =
+{
+  network : function()
+  {
+    document.getElementById("networkModal").style.visibility = "visible";
+
+    document.getElementById("workshopModal").style.visibility = "hidden";
+    document.getElementById("motivationModal").style.visibility = "hidden";
+    document.getElementById("resourceModal").style.visibility = "hidden";
+    document.getElementById("howToModal").style.visibility = "hidden";
+  }, workshop : function()
+  {
+    document.getElementById("workshopModal").style.visibility = "visible";
+
+    document.getElementById("networkModal").style.visibility = "hidden";
+    document.getElementById("motivationModal").style.visibility = "hidden";
+    document.getElementById("resourceModal").style.visibility = "hidden";
+    document.getElementById("howToModal").style.visibility = "hidden";
+  }, motivation : function()
+  {
+    document.getElementById("motivationModal").style.visibility = "visible";
+
+    document.getElementById("networkModal").style.visibility = "hidden";
+    document.getElementById("workshopModal").style.visibility = "hidden";
+    document.getElementById("resourceModal").style.visibility = "hidden";
+    document.getElementById("howToModal").style.visibility = "hidden";
+  }, resource : function()
+  {
+    document.getElementById("resourceModal").style.visibility = "visible";
+
+    document.getElementById("workshopModal").style.visibility = "hidden";
+    document.getElementById("motivationModal").style.visibility = "hidden";
+    document.getElementById("networkModal").style.visibility = "hidden";
+    document.getElementById("howToModal").style.visibility = "hidden";
+  }, howTo : function()
+  {
+    document.getElementById("howToModal").style.visibility = "visible";
+
+    document.getElementById("workshopModal").style.visibility = "hidden";
+    document.getElementById("motivationModal").style.visibility = "hidden";
+    document.getElementById("resourceModal").style.visibility = "hidden";
+    document.getElementById("networkModal").style.visibility = "hidden";
+  }
+};
+// End Event button JavaScript
