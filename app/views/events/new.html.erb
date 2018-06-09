@@ -1,3 +1,4 @@
+<% if current_admin %>
 <%= form_with scope: :event, url: events_path, local: true do |form| %>
   <p>
     <%= form.label :title %><br>
@@ -39,3 +40,11 @@
     <%= form.submit %>
   </p>
 <% end %>
+<% end %>
+
+<% if current_admin %>
+<%= link_to 'admins back', admin_path(current_admin)%>
+
+<% end %>
+
+<p id="home_p"><a href ="/">HOME</a></p>

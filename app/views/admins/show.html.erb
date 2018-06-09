@@ -1,6 +1,8 @@
 <%= @admin.name %>, <%= @admin.email %>
-<%= link_to 'New shout', new_event_path %>
+
 <%= link_to "Settings", edit_admin_path(current_admin) %>
+<%= link_to "All events", events_path, class: "btn btn-lg btn-primary" %>
+<h1 id="logout_h1"><%= link_to 'log out', logout_path(session), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
 
 <form class="" action="/events" enctype="multipart/form-data" method="post">
   <p>Title:</p>

@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
 
   before_action :logged_in_admin, only: [:edit, :update]
-  before_action :correct_user,   only: [:edit, :update]
+  before_action :correct_admin,   only: [:edit, :update]
 
   def show
     @admin = Admin.find(params[:id])
@@ -29,7 +29,7 @@ class AdminsController < ApplicationController
   def update
     @admin = Admin.find(params[:id])
     if @admin.update_attributes(admin_params)
-      redirect_to @user
+      redirect_to @admin
     else
       render 'edit'
     end
@@ -51,7 +51,7 @@ class AdminsController < ApplicationController
 
    def correct_admin
       @admin = Admin.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless current_admin?(@admin)
     end
 
 end
