@@ -1,3 +1,69 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*@media screen and (max-width:320px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller
+  }
+}
+*/
+
+@media screen and (max-width:580px)
+{
+  #nav_words
+  {
+    display: none;
+  }
+}
+/*TAGS*/
+li
+{
+  float: left;
+  display: inline;
+  padding: 28px 20px 0 20px;
+}
+ul
+{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*CLASSES*/
+.container
+{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: fixed;
+}
+.socials
+{
+  float: right;
+  max-width: 25%;
+  padding: 35px 20px 0 20px;
+}
+.socials_pics
+{
+  width: 15%;
+  margin: 5px;
+  max-height: 75%;
+}
+
+
+/*IDS*/
+#header
+{
+  background: #000000;
+  color: #ffffff;
+  padding-top: 5px;
+  min-height: 75px;
+}
+/*Divs*/
+/*imgs*/
+/*Divs*/
+/*imgs*/
+/*Divs*/
+/*imgs*/

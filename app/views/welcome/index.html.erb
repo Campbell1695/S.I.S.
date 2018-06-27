@@ -1,7 +1,29 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
-
+<div class="container">
+  <div id="header">
+    <nav id="nav_words">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Contact</li>
+        <li>About SIS</li>
+      </ul>
+    </nav>
+    <nav id="nav_burger">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Contact</li>
+        <li>About SIS</li>
+      </ul>
+    </nav>
+    <div class="socials">
+      <img src="/assets/facebookLogo.png" class="socials_pics">
+      <img src="/assets/twitterLogo.png" class="socials_pics">
+      <img src="/assets/instaLogo.png" class="socials_pics">
+      <img src="/assets/tumblrLogo.png" class="socials_pics">
+    </div>
+  </div>
+</div>
 <%= link_to "Admin Log In", login_path, class: "btn btn-lg btn-primary" %>
 
 <%= link_to "All events", events_path, class: "btn btn-lg btn-primary" %>
